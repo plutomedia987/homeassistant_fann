@@ -73,7 +73,8 @@ class build_ext(build_ext_orig):
             self.spawn(['cp', str(each), installLocStr])
         
         # Add to system path
-        sys.path.append(installLocStr)
+        if installLocStr not in sys.path:
+            sys.path.append(installLocStr)
         os.chdir(str(cwd))
         
         print(sys.path)
