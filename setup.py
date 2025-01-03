@@ -48,7 +48,8 @@ class build_ext(build_ext_orig):
 
 
         os.chdir(str(build_temp))
-        self.spawn(['cmake', str(cwd)+"/fann", '-DCMAKE_BUILD_TYPE=Debug'])
+        #, '-DCMAKE_BUILD_TYPE=Debug'
+        self.spawn(['cmake', str(cwd)+"/fann"])
         
         self.spawn(['make', 'preinstall'])
         
@@ -88,6 +89,11 @@ setup(
     author='plutomedia987',
     include_package_data=True,
     packages=find_packages(),
+    install_requires=[
+        "gcc", 
+        "cmake",
+        "g++"
+    ]
     ext_modules=[CMakeExtension('libfann/'),
                 
     ],
