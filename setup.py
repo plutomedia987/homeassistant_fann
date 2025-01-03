@@ -54,7 +54,7 @@ class build_ext(build_ext_orig):
         
         # Find the config folder
         installLoc = pathlib.Path("/").glob("**/config/deps")
-        installLoc = pathlib.Pth(list(installLoc)[0])).parent
+        installLoc = pathlib.Path(list(installLoc)[0]).parent
         installLocStr = str(installLoc) + INSTALL_DIR;
         installLoc = pathlib.Path(installLocStr)
         installLoc.mkdir(parents=True, exist_ok=True)
