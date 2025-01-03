@@ -90,8 +90,6 @@ setup(
     include_package_data=True,
     packages=find_packages(),
     install_requires=[
-        "gcc", 
-        "cmake"
     ],
     ext_modules=[CMakeExtension('libfann/'),
                 
