@@ -20,7 +20,7 @@ LONG_DESCRIPTION = """\
     and this folder is added to the os.path
 """
 
-INSTALL_DIR = "custom_libraries/libfann"
+INSTALL_DIR = "/custom_libraries/libfann"
 
 class CMakeExtension(Extension):
 
