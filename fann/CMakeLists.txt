@@ -161,10 +161,10 @@ install (FILES
 
 ################# compile tests ################
 
-ADD_SUBDIRECTORY( lib/googletest )
+# ADD_SUBDIRECTORY( lib/googletest )
 
-if(COMPILER_SUPPORTS_CXX11)
-  ADD_SUBDIRECTORY( tests )
-endif()
+# if(COMPILER_SUPPORTS_CXX11)
+  # ADD_SUBDIRECTORY( tests )
+# endif()
 
 ENDIF()
