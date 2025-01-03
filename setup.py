@@ -93,7 +93,7 @@ setup(
         "gcc", 
         "cmake",
         "g++"
-    ]
+    ],
     ext_modules=[CMakeExtension('libfann/'),
                 
     ],
