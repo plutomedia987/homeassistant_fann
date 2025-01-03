@@ -55,11 +55,13 @@ class build_ext(build_ext_orig):
         # Find the config folder
         installLoc = pathlib.Path("/").glob("**/config/deps")
         installLoc = pathlib.Path(list(installLoc)[0]).parent
+        
+        # Create install folder
         installLocStr = str(installLoc) + INSTALL_DIR;
         installLoc = pathlib.Path(installLocStr)
         installLoc.mkdir(parents=True, exist_ok=True)
         
-        print("Install location: "+installLoc)
+        print("Install location: "+installLocStr)
         
         # Find all lib* files from compile
         libFiles = pathlib.Path(".").glob("src/lib*")
@@ -71,7 +73,7 @@ class build_ext(build_ext_orig):
             self.spawn(['cp', str(each), installLocStr])
         
         # Add to system path
-        sys.path.append(installLoc)
+        sys.path.append(installLocStr)
         os.chdir(str(cwd))
 
 setup(
