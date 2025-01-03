@@ -78,7 +78,7 @@ class build_ext(build_ext_orig):
         os.chdir(str(cwd))
         
         print(sys.path)
-        error
+        # error
 
 setup(
     name=NAME,
