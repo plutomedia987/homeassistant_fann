@@ -75,6 +75,9 @@ class build_ext(build_ext_orig):
         # Add to system path
         sys.path.append(installLocStr)
         os.chdir(str(cwd))
+        
+        error
+        print(sys.path)
 
 setup(
     name=NAME,
