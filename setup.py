@@ -88,7 +88,7 @@ setup(
     author='plutomedia987',
     include_package_data=True,
     packages=find_packages(),
-    ext_modules=[CMakeExtension('fannlib_ha/'),
+    ext_modules=[CMakeExtension('libfann/'),
                 
     ],
     cmdclass={
